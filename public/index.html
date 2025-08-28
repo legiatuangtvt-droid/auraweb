@@ -1,119 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Tiêu đề trang -->
-    <title>Aura - Giải pháp công nghệ</title>
-
-    <!-- SEO cơ bản -->
-    <meta name="description" content="Aura là công ty cung cấp giải pháp công nghệ sáng tạo, giúp doanh nghiệp phát triển bền vững trong kỷ nguyên số.">
-    <meta name="keywords" content="Aura, Công ty Aura, Giải pháp công nghệ, Công nghệ thông tin, Aura Web, Aura Company">
-    <meta name="author" content="Aura Company">
-
-    <!-- Favicon -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
-
-    <!-- Open Graph (khi chia sẻ Facebook, Zalo…) -->
-    <meta property="og:title" content="Aura - Giải pháp công nghệ">
-    <meta property="og:description" content="Aura cung cấp giải pháp công nghệ sáng tạo, đồng hành cùng doanh nghiệp trong kỷ nguyên số.">
-    <meta property="og:image" content="https://yourdomain.com/logo.png">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aura - Giải pháp công nghệ">
-    <meta name="twitter:description" content="Aura cung cấp giải pháp công nghệ sáng tạo, đồng hành cùng doanh nghiệp.">
-    <meta name="twitter:image" content="https://yourdomain.com/logo.png">
-
-    <!-- Firebase SDKs -->
-    <script defer src="/__/firebase/12.1.0/firebase-app-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-performance-compat.js"></script>
-
-    <!-- Firebase init -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <script>
-      // Cấu hình Firebase
-      const firebaseConfig = {
-        apiKey: "AIzaSyDJjCX_kw8QPCCJcDYd_VfQk3fzMPo1xKU",
-        authDomain: "auraweb-23082025.firebaseapp.com",
-        projectId: "auraweb-23082025",
-        storageBucket: "auraweb-23082025.firebasestorage.app",
-        messagingSenderId: "791085170086",
-        appId: "1:791085170086:web:0abd8b9622fe086a79a367",
-        measurementId: "G-XXXXXX" // nếu dùng Analytics
-      };
-
-      // Khởi tạo Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      // Khởi tạo các dịch vụ
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-      const rtdb = firebase.database();
-      const storage = firebase.storage();
+    <!-- Inject Head Settings-->
+    <script type="module">
+      import { injectHead } from './head-settings.js';
+      injectHead();
     </script>
 
-    <!-- CSS mặc định (giữ lại để giao diện không trắng trơn) -->
-    <!-- <style>
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style> -->
+    <!-- Firebase config -->
+    <script type="module" src="firebase-config.js"></script>
 
-      <!-- =======================================================
-    * Web Name: Aura Company
-    * Web URL: https://auraweb-23082025.web.app/
-    * Updated: 24/08/2025
-    * Author: Lê Gia Tuấn
-    * License: 
+    <!-- =======================================================
+    * Web Name: Aura Orientalis
+    * Web URL: https:auraorientalis.vn/
+    * Updated: 28/08/2025
     ======================================================== -->
   </head>
   <body class="index-page">
-
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Aura</h1>
+          <h1 id="sitename" class="sitename">Aura</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -150,36 +59,31 @@
     </header>
 
     <main class="main">
-
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-
         <!-- <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in"> -->
-
         <div id="hero-carousel" class="carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
           <div class="container position-relative">
-
             <div class="carousel-item active">
               <div class="carousel-container">
-                <h2>Core Value – Creativity</h2>
-                <p>At Aura, creativity lies at the heart of everything we do. We believe in pushing boundaries, crafting elegant solutions that are both intuitive and impactful—because innovation is not just what we deliver; it's who we are.</p>
+                <h2 id="hero-title-1"></h2>
+                <p id="hero-title-1-content"></p>
                 <a href="#about" class="btn-get-started">Read More</a>
               </div>
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
               <div class="carousel-container">
-                <h2>Vision</h2>
-                <p>Our vision is to empower businesses, offices, and retail networks with seamless web and mobile experiences—so that every team, store, and café can thrive in a digitally connected world.</p>
+                <h2 id="hero-title-2"></h2>
+                <p id="hero-title-2-content"></p>
                 <a href="#about" class="btn-get-started">Read More</a>
               </div>
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
               <div class="carousel-container">
-                <h2>Customer Service</h2>
-                <p>We deliver personalized, high-touch support, ensuring every client—from SMEs to supermarket chains—feels heard, supported, and confident in our solutions.</p>
+                <h2 id="hero-title-3"></h2>
+                <p id="hero-title-3-content"></p>
                 <a href="#about" class="btn-get-started">Read More</a>
               </div>
             </div><!-- End Carousel Item -->
@@ -193,29 +97,23 @@
             </a>
 
             <ol class="carousel-indicators"></ol>
-
           </div>
-
         </div>
-
       </section><!-- /Hero Section -->
 
       <!-- Featured Services Section -->
       <section id="featured-services" class="featured-services section">
-
         <div class="container">
-
           <div class="row gy-4">
-
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div class="service-item item-cyan position-relative">
                 <div class="icon">
                   <i class="bi bi-activity"></i>
                 </div>
                 <a href="service-details.html" class="stretched-link">
-                  <h3>Human Resources & Organizational Management</h3>
+                  <h3 id="featured-service-title-1"></h3>
                 </a>
-                <p>Streamline hiring, attendance, performance reviews, and employee data with integrated HR workflows.</p>
+                <p id="featured-service-title-1-content"></p>
               </div>
             </div><!-- End Service Item -->
 
@@ -225,9 +123,9 @@
                   <i class="bi bi-broadcast"></i>
                 </div>
                 <a href="service-details.html" class="stretched-link">
-                  <h3>Multi-Store Operations</h3>
+                  <h3 id="featured-service-title-2"></h3>
                 </a>
-                <p>Centralize operations—staffing, scheduling, inventory—across offices, cafés, and retail outlets for consistent oversight and efficiency.</p>
+                <p id="featured-service-title-2-content"></p>
               </div>
             </div><!-- End Service Item -->
 
@@ -237,9 +135,9 @@
                   <i class="bi bi-easel"></i>
                 </div>
                 <a href="service-details.html" class="stretched-link">
-                  <h3>Web & Mobile Platforms</h3>
+                  <h3 id="featured-service-title-3"></h3>
                 </a>
-                <p>Deliver tailored, user-friendly web and app solutions to enhance productivity and operational control uniquely designed for HR, organizational, and retail needs.</p>
+                <p id="featured-service-title-3-content"></p>
               </div>
             </div><!-- End Service Item -->
 
@@ -249,126 +147,79 @@
                   <i class="bi bi-bounding-box-circles"></i>
                 </div>
                 <a href="service-details.html" class="stretched-link">
-                  <h3>Customer Success & Strategic Support</h3>
+                  <h3 id="featured-service-title-4"></h3>
                 </a>
-                <p>Offer responsive, personalized service and strategic guidance ensuring your digital tools evolve confidently with your business.</p>
+                <p id="featured-service-title-4-content"></p>
                 <a href="service-details.html" class="stretched-link"></a>
               </div>
             </div><!-- End Service Item -->
           </div>
-
         </div>
-
       </section><!-- /Featured Services Section -->
 
       <!-- About Section -->
       <section id="about" class="about section light-background">
-
         <div class="container">
-
           <div class="row gy-4">
             <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
               <img src="assets/img/about.jpg" class="img-fluid" alt="">
               <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
             </div>
-            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
-              <h3>Where Technology Meets Imagination</h3>
-              <p class="fst-italic">
-                We transform innovative ideas into seamless digital solutions, connecting teams and empowering businesses to thrive.</p>
-              <ul>
-                <li><i class="bi bi-check2-all"></i> <span>Transforming Ideas into Reality</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Fostering Creativity through Technology</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Driving Innovation for Future Success</span></li>
-              </ul>
-              <p>At Aura, we are dedicated to transforming innovative ideas into impactful digital solutions. By seamlessly integrating creativity with cutting-edge technology, we empower businesses to achieve operational excellence and sustainable growth. We are committed to delivering solutions that not only meet but exceed our clients' expectations, fostering long-term partnerships built on trust and mutual success.</p>
-            </div>
+            <div id = "read-more" class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200"></div>
           </div>
-
         </div>
-
       </section><!-- /About Section -->
 
       <!-- Features Section -->
       <section id="features" class="features section">
-
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Features</h2>
-          <p>Empowering Businesses with Intelligent Digital Solutions.</p>
+          <p id="features-small-content"></p>
         </div><!-- End Section Title -->
 
         <div class="container">
-
           <div class="row gy-4 align-items-center features-item">
             <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
               <img src="assets/img/features-1.svg" class="img-fluid" alt="">
             </div>
-            <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-              <h3>Comprehensive Digital Security Suite</h3>
-              <p class="fst-italic">Aura offers an all-in-one digital security solution, integrating multiple protective features into a single platform.</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span> <strong>Password Management:</strong> Securely store and manage passwords.</span></li>
-                <li><i class="bi bi-check"></i> <span> <strong>VPN & Antivirus:</strong> Protect online activities with VPN and antivirus tools.</span></li>
-                <li><i class="bi bi-check"></i> <span> <strong>Identity Theft Protection:</strong> Monitor and safeguard against identity theft.</span></li>
-              </ul>
-            </div>
+            <div  id="features-content-1" class="col-md-7" data-aos="fade-up" data-aos-delay="100"></div>
           </div><!-- Features Item -->
 
           <div class="row gy-4 align-items-center features-item">
             <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
               <img src="assets/img/features-2.svg" class="img-fluid" alt="">
             </div>
-            <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-              <h3>AI-Powered Parental Control</h3>
-              <p class="fst-italic">Aura utilizes artificial intelligence to enhance parental control features, providing deeper insights into children's online activities.</p>
-              <p>The AI-driven tools analyze online behavior patterns, enabling parents to monitor and manage their children's digital interactions effectively.</p>
-            </div>
+            <div  id="features-content-2" class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200"></div>
           </div><!-- Features Item -->
 
           <div class="row gy-4 align-items-center features-item">
             <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
               <img src="assets/img/features-3.svg" class="img-fluid" alt="">
             </div>
-            <div class="col-md-7" data-aos="fade-up">
-              <h3>Advanced Health Monitoring Devices</h3>
-              <p>Aura provides state-of-the-art health monitoring devices that seamlessly integrate with wearable technology.</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Body Composition Analysis: Assess fat, muscle, and water levels.</span></li>
-                <li><i class="bi bi-check"></i> <span>Hydration Monitoring: Track hydration status.</span></li>
-                <li><i class="bi bi-check"></i> <span>Integration with Health Platforms: Sync data with platforms like Apple HealthKit.</span>.</li>
-              </ul>
-            </div>
+            <div id="features-content-3" class="col-md-7" data-aos="fade-up"></div>
           </div><!-- Features Item -->
 
           <div class="row gy-4 align-items-center features-item">
             <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
               <img src="assets/img/features-4.svg" class="img-fluid" alt="">
             </div>
-            <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-              <h3>Seamless Digital Photo Sharing</h3>
-              <p class="fst-italic">Aura's digital photo frames facilitate effortless sharing and viewing of photos.</p>
-              <p>With features like unlimited storage and easy synchronization with cloud services, Aura's frames provide a modern solution for displaying and sharing memories.</p>
-            </div>
+            <div id="features-content-4" class="col-md-7 order-2 order-md-1" data-aos="fade-up"></div>
           </div><!-- Features Item -->
-
         </div>
-
       </section><!-- /Features Section -->
-
     </main>
 
     <footer id="footer" class="footer dark-background">
-
-      <!-- Dùng dịch vụ của EmailJS, gói Free 200 mail/tháng-->
-      <div class="footer-newsletter">
+      <!-- <div class="footer-newsletter">
         <div class="container">
           <div class="row justify-content-center text-center">
             <div class="col-lg-6">
               <h4>Join Our Newsletter</h4>
-              <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+              <p>Subscribe to our newsletter and receive the latest news about our products and services!</p> -->
 
               <!-- Newsletter Form -->
-              <form id="newsletter-form" class="php-email-form">
+              <!-- <form id="newsletter-form" class="php-email-form">
                 <div class="newsletter-form">
                   <input type="email" id="newsletter-email" name="email" required placeholder="Enter your email">
                   <input type="submit" value="Subscribe">
@@ -380,25 +231,28 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Không sử dụng PHP-->
-      <!-- <div class="footer-newsletter">
+      <!-- Sử dụng PHP-->
+      <div class="footer-newsletter">
         <div class="container">
           <div class="row justify-content-center text-center">
             <div class="col-lg-6">
               <h4>Join Our Newsletter</h4>
               <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
-                <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-                <div class="loading">Loading</div>
+              <form class="php-email-form" method="post" action="https://mail92139.maychuemail.com:1000/newsletter/subscribe/2c3e12c5-064a-47c8-af4f-189152803a7e">
+                <div class="newsletter-form">
+                  <input type="email" name="subscriber">
+                  <input type="submit" value="Subscribe">
+                </div>
+                <div class="loading">Loading...</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your subscription request has been sent. Thank you!</div>
               </form>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <div class="container footer-top">
         <div class="row gy-4">
@@ -442,6 +296,7 @@
               <a href=""><i class="bi bi-facebook"></i></a>
               <a href=""><i class="bi bi-instagram"></i></a>
               <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="auraProject/index.html"><i class="bi bi-p-circle"></i></a>
             </div>
           </div>
 
@@ -455,7 +310,7 @@
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a>LGT</a>
+          Designed by <a>Aura Orientalis</a>
         </div>
       </div>
 
@@ -467,15 +322,12 @@
     <!-- Preloader -->
     <div id="preloader"></div>
 
+    <!-- Load Body Content-->
+    <script src="body-content.js"></script>
+    
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Không dùng PHP Email -->
     <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
-    <!-- Thay thế bằng EmailJS Service -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="assets/vendor/php-email-form/emailjs.js"></script>
-
-
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

@@ -1,11 +1,3 @@
-/**
-* Template Name: Aura
-* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-Aura/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
