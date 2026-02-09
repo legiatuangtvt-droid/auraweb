@@ -20,11 +20,6 @@
     if (saved && SUPPORTED_LANGS.includes(saved)) {
       return saved;
     }
-    // Try browser language
-    const browserLang = navigator.language.slice(0, 2);
-    if (SUPPORTED_LANGS.includes(browserLang)) {
-      return browserLang;
-    }
     return DEFAULT_LANG;
   }
 
