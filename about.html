@@ -40,18 +40,18 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About Us</a></li>
-          <li><a href="services.html">Our Business</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" class="active" data-i18n="nav.about">About Us</a></li>
+          <li><a href="services.html" data-i18n="nav.business">Our Business</a></li>
+          <li><a href="blog.html" data-i18n="nav.news">News</a></li>
+          <li class="dropdown"><a href="#"><span data-i18n="nav.language">Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#" data-lang="en">English</a></li>
               <li><a href="#" data-lang="ja">日本語</a></li>
               <li><a href="#" data-lang="vi">Tiếng Việt</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -64,12 +64,12 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container position-relative">
-        <h1>About Us</h1>
-        <p>Discover the story behind Aura Orientalis and our mission to create a calming way of life.</p>
+        <h1 data-i18n="about.page_title">About Us</h1>
+        <p data-i18n="about.page_desc">Discover the story behind Aura Orientalis and our mission to create a calming way of life.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">About Us</li>
+            <li class="current" data-i18n="about.breadcrumb">About Us</li>
           </ol>
         </nav>
       </div>
@@ -80,7 +80,7 @@
       <div class="container">
 
         <div class="container section-title" data-aos="fade-up">
-          <h2>Our Company</h2>
+          <h2 data-i18n="about.company_title">Our Company</h2>
         </div>
 
         <div class="row gy-4">
@@ -88,14 +88,14 @@
             <img src="assets/img/about.jpg" class="img-fluid rounded" alt="Aura Orientalis Office">
           </div>
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
-            <p class="fst-italic mb-4" style="font-size: 1.15rem; color: var(--accent-color);">
+            <p class="fst-italic mb-4" style="font-size: 1.15rem; color: var(--accent-color);" data-i18n="about.company_meaning">
               "Aura Orientalis" means "Eastern Breeze or Brilliance" in Latin.
             </p>
             <ul>
-              <li><i class="bi bi-check2-all"></i> <span><strong>"Orientalis"</strong> refers to the Orient, including Vietnam and Japan.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span><strong>"Aura"</strong> means the comfortable, calming, gentle breeze, or energy of life.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-i18n="about.company_orientalis"><strong>"Orientalis"</strong> refers to the Orient, including Vietnam and Japan.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span data-i18n="about.company_aura"><strong>"Aura"</strong> means the comfortable, calming, gentle breeze, or energy of life.</span></li>
             </ul>
-            <p class="mt-3">
+            <p class="mt-3" data-i18n="about.company_hope">
               We hope <strong>"to be that comfortable breeze or energy of life from the East"</strong>.
             </p>
           </div>
@@ -109,16 +109,16 @@
       <div class="container">
 
         <div class="container section-title" data-aos="fade-up">
-          <h2>Our Story</h2>
+          <h2 data-i18n="about.story_title">Our Story</h2>
         </div>
 
         <div class="row gy-4">
           <div class="col-lg-7 content" data-aos="fade-up" data-aos-delay="100">
-            <p>Our company was founded by a Vietnamese and a Japanese person. The Vietnamese founder studied in Japan, learning about Japanese culture, history, and values, while the Japanese founder similarly worked and lived in Vietnam. Both partners fell in love with each other's countries, so much so that they consider them second homes.</p>
-            <p>Currently, many Japanese people work in Vietnam, and even more Vietnamese work in Japan. We hope to fuse Vietnamese and Japanese cultures and ways of life here in Vietnam, and to spread a peaceful, comfortable lifestyle to the world.</p>
-            <p>Furthermore, in Vietnam, where young people are thriving, we want to support young Vietnamese who want to start their own businesses, help them realize their dreams, and hopefully contribute to a better, more comfortable world.</p>
-            <p>We hope that by realizing each person's small dreams through our small companies, we can spread a more comfortable world, even if only a little at a time.</p>
-            <p class="fst-italic" style="color: var(--accent-color);">
+            <p data-i18n="about.story_p1">Our company was founded by a Vietnamese and a Japanese person. The Vietnamese founder studied in Japan, learning about Japanese culture, history, and values, while the Japanese founder similarly worked and lived in Vietnam. Both partners fell in love with each other's countries, so much so that they consider them second homes.</p>
+            <p data-i18n="about.story_p2">Currently, many Japanese people work in Vietnam, and even more Vietnamese work in Japan. We hope to fuse Vietnamese and Japanese cultures and ways of life here in Vietnam, and to spread a peaceful, comfortable lifestyle to the world.</p>
+            <p data-i18n="about.story_p3">Furthermore, in Vietnam, where young people are thriving, we want to support young Vietnamese who want to start their own businesses, help them realize their dreams, and hopefully contribute to a better, more comfortable world.</p>
+            <p data-i18n="about.story_p4">We hope that by realizing each person's small dreams through our small companies, we can spread a more comfortable world, even if only a little at a time.</p>
+            <p class="fst-italic" style="color: var(--accent-color);" data-i18n="about.story_p5">
               This will be our thoughts: to play a part in the fusion of Vietnam and Japan to create a more comfortable world, and to realize <strong>"A calming way of life"</strong>.
             </p>
           </div>
@@ -135,7 +135,7 @@
       <div class="container">
 
         <div class="container section-title" data-aos="fade-up">
-          <h2>Our Philosophy</h2>
+          <h2 data-i18n="about.philosophy_title">Our Philosophy</h2>
         </div>
 
         <div class="row gy-4">
@@ -144,8 +144,8 @@
               <div class="icon mb-4">
                 <i class="bi bi-eye" style="font-size: 3rem; color: var(--accent-color);"></i>
               </div>
-              <h3>Our Vision</h3>
-              <p>Our vision is for everyone to live happily through a comfortable environment and a calm mind and body.</p>
+              <h3 data-i18n="about.vision_title">Our Vision</h3>
+              <p data-i18n="about.vision_text">Our vision is for everyone to live happily through a comfortable environment and a calm mind and body.</p>
             </div>
           </div>
 
@@ -154,9 +154,9 @@
               <div class="icon mb-4">
                 <i class="bi bi-bullseye" style="font-size: 3rem; color: var(--accent-color);"></i>
               </div>
-              <h3>Our Mission</h3>
-              <p>Our mission is to create a comfortable and peaceful world for our customers, the people around them, and the environment through our products and services.</p>
-              <p class="mt-3">It is to provide products and services that bring comfort and calming to people, inspired by the culture, history, philosophy, art, fashion, and natural materials cultivated in the East.</p>
+              <h3 data-i18n="about.mission_title">Our Mission</h3>
+              <p data-i18n="about.mission_text1">Our mission is to create a comfortable and peaceful world for our customers, the people around them, and the environment through our products and services.</p>
+              <p class="mt-3" data-i18n="about.mission_text2">It is to provide products and services that bring comfort and calming to people, inspired by the culture, history, philosophy, art, fashion, and natural materials cultivated in the East.</p>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@
       <div class="container">
 
         <div class="container section-title" data-aos="fade-up">
-          <h2>Company Profile</h2>
+          <h2 data-i18n="about.profile_title">Company Profile</h2>
         </div>
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -177,35 +177,35 @@
             <table class="table table-bordered company-table">
               <tbody>
                 <tr>
-                  <th>Company Name</th>
-                  <td>Aura Orientalis Co., LTD.</td>
+                  <th data-i18n="about.profile_company_name">Company Name</th>
+                  <td data-i18n="about.profile_company_name_val">Aura Orientalis Co., LTD.</td>
                 </tr>
                 <tr>
-                  <th>Address</th>
-                  <td>314/6 Dien Bien Phu Street, Vuon Lai Ward, Ho Chi Minh City, Vietnam</td>
+                  <th data-i18n="about.profile_address">Address</th>
+                  <td data-i18n="about.profile_address_val">314/6 Dien Bien Phu Street, Vuon Lai Ward, Ho Chi Minh City, Vietnam</td>
                 </tr>
                 <tr>
-                  <th>Founding Chairman</th>
-                  <td>Yoshihito Ito</td>
+                  <th data-i18n="about.profile_chairman">Founding Chairman</th>
+                  <td data-i18n="about.profile_chairman_val">Yoshihito Ito</td>
                 </tr>
                 <tr>
-                  <th>President / Representative Director</th>
-                  <td>Nguyen Bui Kim Ngoc</td>
+                  <th data-i18n="about.profile_president">President / Representative Director</th>
+                  <td data-i18n="about.profile_president_val">Nguyen Bui Kim Ngoc</td>
                 </tr>
                 <tr>
-                  <th>Establishment</th>
-                  <td>Year of 2025</td>
+                  <th data-i18n="about.profile_establishment">Establishment</th>
+                  <td data-i18n="about.profile_establishment_val">Year of 2025</td>
                 </tr>
                 <tr>
-                  <th>Main Business</th>
-                  <td>Manufacturing &amp; Retail, System Development, Trading, Business Support</td>
+                  <th data-i18n="about.profile_business">Main Business</th>
+                  <td data-i18n="about.profile_business_val">Manufacturing &amp; Retail, System Development, Trading, Business Support</td>
                 </tr>
                 <tr>
-                  <th>Phone</th>
+                  <th data-i18n="about.profile_phone">Phone</th>
                   <td>+84 935 088 346</td>
                 </tr>
                 <tr>
-                  <th>Email</th>
+                  <th data-i18n="about.profile_email">Email</th>
                   <td>ngoc.nguyen@auraorientalis.vn</td>
                 </tr>
               </tbody>
@@ -226,7 +226,7 @@
           <a href="index.html" class="d-flex align-items-center">
             <span class="sitename">Aura Orientalis</span>
           </a>
-          <p class="mt-3">A calming way of life</p>
+          <p class="mt-3" data-i18n="footer.slogan">A calming way of life</p>
           <div class="footer-contact pt-3">
             <p>314/6 Dien Bien Phu Street,</p>
             <p>Vuon Lai Ward, Ho Chi Minh City, Vietnam</p>
@@ -236,7 +236,7 @@
         </div>
 
         <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer.quick_links">Quick Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
@@ -246,8 +246,8 @@
         </div>
 
         <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Stay connected with Aura Orientalis</p>
+          <h4 data-i18n="footer.follow_us">Follow Us</h4>
+          <p data-i18n="footer.follow_desc">Stay connected with Aura Orientalis</p>
           <div class="social-links d-flex">
             <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
@@ -257,7 +257,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">Aura Orientalis</strong> <span>All Rights Reserved</span></p>
+      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">Aura Orientalis</strong> <span data-i18n="footer.copyright">All Rights Reserved</span></p>
     </div>
 
   </footer>
@@ -281,6 +281,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
 </body>
 

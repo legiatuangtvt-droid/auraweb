@@ -40,18 +40,18 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Business</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="services.html" data-i18n="nav.business">Our Business</a></li>
+          <li><a href="blog.html" data-i18n="nav.news">News</a></li>
+          <li class="dropdown"><a href="#"><span data-i18n="nav.language">Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#" data-lang="en">English</a></li>
               <li><a href="#" data-lang="ja">日本語</a></li>
               <li><a href="#" data-lang="vi">Tiếng Việt</a></li>
             </ul>
           </li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -64,12 +64,12 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container position-relative">
-        <h1>Contact</h1>
-        <p>We'd love to hear from you. Get in touch with us today.</p>
+        <h1 data-i18n="contact.page_title">Contact</h1>
+        <p data-i18n="contact.page_desc">We'd love to hear from you. Get in touch with us today.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Contact</li>
+            <li class="current" data-i18n="contact.breadcrumb">Contact</li>
           </ol>
         </nav>
       </div>
@@ -86,24 +86,24 @@
               <div class="col-lg-12">
                 <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>314/6 Dien Bien Phu Street, Vuon Lai Ward, Ho Chi Minh City, Vietnam</p>
+                  <h3 data-i18n="contact.address_title">Address</h3>
+                  <p data-i18n="contact.address_text">314/6 Dien Bien Phu Street, Vuon Lai Ward, Ho Chi Minh City, Vietnam</p>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+84 935 088 346</p>
+                  <h3 data-i18n="contact.phone_title">Call Us</h3>
+                  <p data-i18n="contact.phone_text">+84 935 088 346</p>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
                   <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>ngoc.nguyen@auraorientalis.vn</p>
+                  <h3 data-i18n="contact.email_title">Email Us</h3>
+                  <p data-i18n="contact.email_text">ngoc.nguyen@auraorientalis.vn</p>
                 </div>
               </div>
 
@@ -115,19 +115,19 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="" data-i18n-placeholder="contact.form_name">
                 </div>
 
                 <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="" data-i18n-placeholder="contact.form_email">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="" data-i18n-placeholder="contact.form_subject">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required="" data-i18n-placeholder="contact.form_message"></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -135,7 +135,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit" data-i18n="contact.form_send">Send Message</button>
                 </div>
 
               </div>
@@ -162,7 +162,7 @@
           <a href="index.html" class="d-flex align-items-center">
             <span class="sitename">Aura Orientalis</span>
           </a>
-          <p class="mt-3">A calming way of life</p>
+          <p class="mt-3" data-i18n="footer.slogan">A calming way of life</p>
           <div class="footer-contact pt-3">
             <p>314/6 Dien Bien Phu Street,</p>
             <p>Vuon Lai Ward, Ho Chi Minh City, Vietnam</p>
@@ -172,7 +172,7 @@
         </div>
 
         <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer.quick_links">Quick Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
@@ -182,8 +182,8 @@
         </div>
 
         <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Stay connected with Aura Orientalis</p>
+          <h4 data-i18n="footer.follow_us">Follow Us</h4>
+          <p data-i18n="footer.follow_desc">Stay connected with Aura Orientalis</p>
           <div class="social-links d-flex">
             <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
@@ -193,7 +193,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">Aura Orientalis</strong> <span>All Rights Reserved</span></p>
+      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">Aura Orientalis</strong> <span data-i18n="footer.copyright">All Rights Reserved</span></p>
     </div>
 
   </footer>
@@ -217,6 +217,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
 </body>
 

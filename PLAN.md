@@ -287,49 +287,51 @@ auraWeb/
 
 ## 7. Kế hoạch triển khai (Phases)
 
-### Phase 1: Setup & Foundation
-- [ ] Copy template HTML sang root project
-- [ ] Tải và setup vendor libraries (Bootstrap, AOS, Swiper, etc.)
-- [ ] Chuẩn bị assets: convert logo PDF → PNG/SVG, favicon
-- [ ] Customize `assets/css/main.css` với brand color `#1268b3`
-- [ ] Setup Header chung: logo image, nav links đúng (Home, About Us, Our Business, News, Language, Contact)
-- [ ] Setup Footer chung: địa chỉ đúng (314/6 Dien Bien Phu), phone, email, LinkedIn
+### Phase 1: Setup & Foundation ✅
+- [x] Copy template HTML sang root project
+- [x] Tải và setup vendor libraries (Bootstrap, AOS, Swiper, etc.)
+- [x] Chuẩn bị assets: convert logo PDF → PNG/SVG, favicon
+- [x] Customize `assets/css/main.css` (2000+ dòng) với brand color `#1268b3`
+- [x] Tạo `assets/js/main.js` (350 dòng) với nav, scroll, AOS, Swiper
+- [x] Setup Header chung: logo image, nav links đúng
+- [x] Setup Footer chung: địa chỉ đúng (314/6 Dien Bien Phu), phone, email, LinkedIn
 
-### Phase 2: Trang Home (index.html)
-- [ ] Hero section: logo lớn + slogan "A calming way of life"
-- [ ] Founder's Message section (EN, có toggle JP/VN)
-- [ ] Loại bỏ sections không cần từ template
-- [ ] Responsive check
+### Phase 2: Trang Home (index.html) ✅
+- [x] Hero section: logo lớn + slogan "A calming way of life"
+- [x] Founder's Message section (EN)
+- [x] Quick Services Overview (4 cards)
+- [x] Responsive layout
 
-### Phase 3: Trang About Us (about.html)
-- [ ] Our Company section (ý nghĩa tên, layout text + image)
-- [ ] Our Story section (text trái, hình phải)
-- [ ] Philosophy section (Vision + Mission - 2 columns ngang)
-- [ ] Company Profile table
-- [ ] Loại bỏ Stats, Clients, Skills, Testimonials sections
+### Phase 3: Trang About Us (about.html) ✅
+- [x] Our Company section (ý nghĩa tên, layout text + image)
+- [x] Our Story section (text trái, hình phải)
+- [x] Philosophy section (Vision + Mission - 2 columns ngang)
+- [x] Company Profile table
+- [x] Loại bỏ Stats, Clients, Skills, Testimonials sections
 
-### Phase 4: Trang Our Business (services.html)
-- [ ] Page title với mô tả Aura Orientalis
-- [ ] 4 Featured service cards (icon + tên)
-- [ ] 4 Detail sections với hình + mô tả
-- [ ] Nội dung đúng: Manufacturing & Retail, System Development, Trading, Business Support
-- [ ] Loại bỏ Pricing section
+### Phase 4: Trang Our Business (services.html) ✅
+- [x] Page title với mô tả Aura Orientalis
+- [x] 4 Featured service cards (icon + tên)
+- [x] 4 Detail sections với hình + mô tả
+- [x] Nội dung đúng: Manufacturing & Retail, System Development, Trading, Business Support
 
-### Phase 5: Trang Contact & News
-- [ ] Contact: cập nhật địa chỉ, phone, email thực
-- [ ] Contact: Google Maps embed đúng vị trí HCM
-- [ ] News/Blog: tạo skeleton placeholder
-- [ ] 404 page
+### Phase 5: Trang Contact & News ✅
+- [x] Contact: cập nhật địa chỉ, phone, email thực
+- [x] Contact: Google Maps embed vị trí HCM
+- [x] News/Blog: tạo skeleton placeholder "Coming Soon"
+- [x] 404 page
 
-### Phase 6: i18n (Đa ngôn ngữ)
-- [ ] Tạo language switcher trên header
-- [ ] Implement JSON-based content cho 3 ngôn ngữ
+### Phase 6: i18n (Đa ngôn ngữ) 🔄
+- [x] Tạo JSON translation files (en.json, ja.json, vi.json)
+- [x] Implement i18n.js switcher module
+- [x] Language switcher dropdown trên header
+- [ ] Thêm data-i18n attributes vào tất cả HTML pages
 - [ ] Test chuyển đổi EN/JP/VN
 
 ### Phase 7: Polish & Deploy
 - [ ] SEO: meta tags, OG images, title đúng cho mỗi trang
 - [ ] Performance: image optimization, lazy loading
-- [ ] Thêm Noto Sans JP font cho tiếng Nhật
+- [x] Thêm Noto Sans JP font cho tiếng Nhật
 - [ ] Cross-browser testing
 - [ ] Deploy
 
@@ -354,10 +356,10 @@ auraWeb/
 | Thu thập yêu cầu | ✅ Hoàn thành |
 | Phân tích template | ✅ Hoàn thành |
 | Lập kế hoạch | ✅ Hoàn thành |
-| Phase 1: Setup & Foundation | ⬜ Chưa bắt đầu |
-| Phase 2: Trang Home | ⬜ Chưa bắt đầu |
-| Phase 3: Trang About Us | ⬜ Chưa bắt đầu |
-| Phase 4: Trang Our Business | ⬜ Chưa bắt đầu |
-| Phase 5: Contact & News | ⬜ Chưa bắt đầu |
-| Phase 6: i18n | ⬜ Chưa bắt đầu |
+| Phase 1: Setup & Foundation | ✅ Hoàn thành |
+| Phase 2: Trang Home | ✅ Hoàn thành |
+| Phase 3: Trang About Us | ✅ Hoàn thành |
+| Phase 4: Trang Our Business | ✅ Hoàn thành |
+| Phase 5: Contact & News | ✅ Hoàn thành |
+| Phase 6: i18n | 🔄 Đang triển khai |
 | Phase 7: Polish & Deploy | ⬜ Chưa bắt đầu |
