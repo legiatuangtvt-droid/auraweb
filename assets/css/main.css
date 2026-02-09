@@ -1780,7 +1780,7 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
 
 }
 
-/* --- Large (max-width: 991px) --- */
+/* --- Large / Tablet (max-width: 991px) --- */
 @media (max-width: 991.98px) {
 
   /* Show mobile nav toggle */
@@ -1817,9 +1817,41 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
     height: 220px;
   }
 
+  /* Services detail: stack vertically on tablet */
+  #services .row .col-lg-6 {
+    width: 100%;
+  }
+
+  /* Ensure text always comes first when stacked */
+  #services .row {
+    flex-direction: column;
+  }
+
+  #services .row .col-lg-6:has(.service-item) {
+    order: 1;
+  }
+
+  #services .row .col-lg-6:has(.service-img-placeholder) {
+    order: 2;
+  }
+
+  .service-img-placeholder {
+    min-height: 200px;
+  }
+
+  /* Philosophy cards: 2+1 layout on tablet */
+  .philosophy-card {
+    margin-top: 36px;
+  }
+
+  /* Founder message */
+  .founder-message .message-content {
+    padding: 30px 24px;
+  }
+
 }
 
-/* --- Medium (max-width: 767px) --- */
+/* --- Medium / Mobile (max-width: 767px) --- */
 @media (max-width: 767.98px) {
 
   .section {
@@ -1851,6 +1883,60 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
   /* Featured services stack */
   .featured-services .service-item {
     margin-bottom: 20px;
+  }
+
+  /* Featured services: single column on mobile */
+  .featured-services .col-lg-4 {
+    width: 100%;
+  }
+
+  /* Services detail */
+  .service-img-placeholder {
+    min-height: 180px;
+  }
+
+  #services .row.mb-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  /* Philosophy section */
+  .philosophy.section.dark-background {
+    padding: 50px 0;
+  }
+
+  .philosophy-card {
+    margin-top: 36px;
+    padding-top: 48px !important;
+  }
+
+  .philosophy-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .philosophy-icon {
+    top: -30px;
+  }
+
+  .philosophy-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .philosophy-card p {
+    font-size: 0.88rem;
+  }
+
+  /* Founder message */
+  .founder-message .message-content {
+    padding: 24px 18px;
+  }
+
+  .founder-message .message-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .founder-message .message-content p {
+    font-size: 0.95rem;
   }
 
   /* Contact form */
@@ -1895,12 +1981,54 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
     font-size: 22px;
   }
 
+  .header .logo img {
+    max-height: 34px;
+  }
+
   .page-title h1 {
     font-size: 22px;
   }
 
   .page-title .breadcrumbs ol {
     font-size: 13px;
+  }
+
+  /* Featured services: tighter padding */
+  .featured-services .service-item {
+    padding: 20px 18px;
+  }
+
+  .featured-services .service-item .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 28px;
+  }
+
+  .featured-services .service-item h3 {
+    font-size: 17px;
+  }
+
+  /* Services detail */
+  .service-img-placeholder {
+    min-height: 150px;
+  }
+
+  /* Philosophy */
+  .philosophy-icon img {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+  }
+
+  .philosophy-icon {
+    top: -26px;
+  }
+
+  .philosophy-card {
+    margin-top: 30px;
+    padding-top: 40px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   /* Contact info items stack */
@@ -1919,9 +2047,17 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
     width: 100%;
   }
 
-  /* Footer social links center */
+  /* Footer */
   .footer .social-links {
     justify-content: center;
+  }
+
+  .footer .footer-top {
+    padding: 30px 0 15px;
+  }
+
+  .footer .footer-top .footer-about .logo a {
+    font-size: 22px;
   }
 
 }
