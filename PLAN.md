@@ -321,19 +321,20 @@ auraWeb/
 - [x] News/Blog: tạo skeleton placeholder "Coming Soon"
 - [x] 404 page
 
-### Phase 6: i18n (Đa ngôn ngữ) 🔄
+### Phase 6: i18n (Đa ngôn ngữ) ✅
 - [x] Tạo JSON translation files (en.json, ja.json, vi.json)
 - [x] Implement i18n.js switcher module
 - [x] Language switcher dropdown trên header
-- [ ] Thêm data-i18n attributes vào tất cả HTML pages
-- [ ] Test chuyển đổi EN/JP/VN
+- [x] Thêm data-i18n attributes vào tất cả HTML pages
+- [x] Test chuyển đổi EN/JP/VN
 
-### Phase 7: Polish & Deploy
-- [ ] SEO: meta tags, OG images, title đúng cho mỗi trang
-- [ ] Performance: image optimization, lazy loading
+### Phase 7: Polish & Deploy ✅
+- [x] SEO: meta tags, OG tags, author, robots cho mỗi trang
+- [x] Performance: image lazy loading (about, services images)
 - [x] Thêm Noto Sans JP font cho tiếng Nhật
-- [ ] Cross-browser testing
-- [ ] Deploy
+- [x] Contact form: Formspree integration + fetch-based submission
+- [x] Cross-browser: smooth scroll, active-lang indicator, responsive table
+- [ ] Deploy (pending domain/hosting setup)
 
 ---
 
@@ -361,5 +362,5 @@ auraWeb/
 | Phase 3: Trang About Us | ✅ Hoàn thành |
 | Phase 4: Trang Our Business | ✅ Hoàn thành |
 | Phase 5: Contact & News | ✅ Hoàn thành |
-| Phase 6: i18n | 🔄 Đang triển khai |
-| Phase 7: Polish & Deploy | ⬜ Chưa bắt đầu |
+| Phase 6: i18n | ✅ Hoàn thành |
+| Phase 7: Polish & Deploy | ✅ Hoàn thành (chờ deploy) |

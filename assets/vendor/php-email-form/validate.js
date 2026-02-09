@@ -1,6 +1,6 @@
 /**
- * PHP Email Form Validation - Placeholder
- * For static site, form submissions handled via alternative methods
+ * Contact Form Validation & Submission
+ * Supports Formspree and custom API endpoints
  */
 (function () {
   "use strict";
@@ -23,14 +23,37 @@
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
 
-      // Simulate form submission for static site
-      setTimeout(function () {
-        thisForm.querySelector('.loading').classList.remove('d-block');
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset();
-      }, 1500);
+      let formData = new FormData(thisForm);
+
+      submitForm(thisForm, action, formData);
     });
   });
+
+  function submitForm(thisForm, action, formData) {
+    fetch(action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(function (response) {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error(response.status + ' ' + response.statusText);
+      })
+      .then(function (data) {
+        thisForm.querySelector('.loading').classList.remove('d-block');
+        if (data.ok || data.success || data.next) {
+          thisForm.querySelector('.sent-message').classList.add('d-block');
+          thisForm.reset();
+        } else {
+          throw new Error(data.error || 'Form submission failed.');
+        }
+      })
+      .catch(function (error) {
+        displayError(thisForm, error.message || 'Something went wrong. Please try again later.');
+      });
+  }
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');

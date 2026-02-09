@@ -2073,3 +2073,38 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
 .company-table tbody tr:hover td {
   background-color: var(--color-bg-accent-light);
 }
+
+@media (max-width: 575.98px) {
+  .company-table th,
+  .company-table td {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  .company-table th {
+    width: 40%;
+  }
+}
+
+
+/* ==========================================================================
+   22. i18n Active Language Indicator
+   ========================================================================== */
+
+.navmenu .dropdown ul a.active-lang {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+
+/* ==========================================================================
+   23. Smooth Scroll & Selection
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(var(--color-primary-rgb), 0.2);
+  color: inherit;
+}
