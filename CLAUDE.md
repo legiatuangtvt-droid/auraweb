@@ -65,10 +65,22 @@ npm run dev
 - `mô tả thiết kế web Aura.docx` - Mô tả layout và thiết kế
 - `PLAN.md` - Kế hoạch thiết kế và triển khai
 
-## Tech Stack (TBD - sẽ cập nhật sau khi chọn)
-- Framework: TBD
-- Styling: TBD
-- Deployment: TBD
+## Tech Stack
+- **Base Template:** BootstrapMade "Aura" (Bootstrap 5.3.3) - folder `template/`
+- **CSS:** Bootstrap 5 + custom `assets/css/main.css`
+- **JS Libraries:** AOS, GLightbox, Swiper, PureCounter, Waypoints, Isotope
+- **Fonts:** Roboto, Poppins, Raleway (Google Fonts) + Noto Sans JP (cho tiếng Nhật)
+- **Icons:** Bootstrap Icons
+- **Deployment:** Static hosting (GitHub Pages / Vercel / Netlify)
+
+## Template Mapping
+| Template file | → Aura page |
+|---------------|-------------|
+| `index.html` | Home (trang chủ) |
+| `about.html` | About Us |
+| `services.html` | Our Business |
+| `blog.html` | News |
+| `contact.html` | Contact |
 
 ## Conventions
 - Commit messages bằng tiếng Anh

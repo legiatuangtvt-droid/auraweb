@@ -6,6 +6,8 @@
 
 **Slogan:** "A calming way of life"
 
+**Approach:** Sử dụng template BootstrapMade "Aura" (Bootstrap 5.3.3) đã có sẵn tại `template/` làm khung sườn, tùy biến nội dung và giao diện cho phù hợp.
+
 ---
 
 ## 2. Thông tin thu thập từ tài liệu
@@ -36,75 +38,71 @@
 
 ## 3. Kiến trúc & Công nghệ
 
-### 3.1 Tech Stack đề xuất
-| Thành phần | Công nghệ | Lý do |
-|------------|-----------|-------|
-| Framework | **Next.js 14+ (App Router)** | SSG cho tốc độ, SEO tốt, i18n built-in |
-| Styling | **Tailwind CSS** | Nhanh, responsive, dễ customize brand colors |
-| Language | **TypeScript** | Type safety, maintainability |
-| i18n | **next-intl** | Đa ngôn ngữ EN/JP/VN dễ dàng |
-| Animation | **Framer Motion** | Hiệu ứng mượt, phù hợp "calming" theme |
-| Icons | **Lucide React** | Nhẹ, đẹp, phù hợp design minimal |
-| Deployment | **Vercel** | Zero-config cho Next.js |
+### 3.1 Tech Stack (dựa trên template có sẵn)
+| Thành phần | Công nghệ | Ghi chú |
+|------------|-----------|---------|
+| Base Template | **BootstrapMade "Aura"** | Template có sẵn tại `template/` |
+| CSS Framework | **Bootstrap 5.3.3** | Responsive grid, components |
+| Fonts | **Roboto, Poppins, Raleway** | Google Fonts (đã cấu hình) |
+| Animation | **AOS (Animate On Scroll)** | Fade-in, zoom effects |
+| Lightbox | **GLightbox** | Image/video popup |
+| Slider | **Swiper** | Carousel/slider components |
+| Counter | **PureCounter** | Animated number counters |
+| Icons | **Bootstrap Icons** | Icon library |
+| CSS Custom | **assets/css/main.css** | Tùy biến brand colors, layout |
+| i18n | **JavaScript switcher** | Chuyển ngôn ngữ bằng JS hoặc trang riêng |
 
 ### 3.2 Cấu trúc thư mục
 ```
 auraWeb/
-├── public/
-│   ├── images/          # Logo, hero images, product images
-│   ├── fonts/           # Custom fonts (nếu cần)
-│   └── favicon.ico
-├── src/
-│   ├── app/
-│   │   ├── [locale]/        # Dynamic locale routing
-│   │   │   ├── layout.tsx
-│   │   │   ├── page.tsx         # Home
-│   │   │   ├── about/
-│   │   │   │   └── page.tsx     # About Us
-│   │   │   ├── business/
-│   │   │   │   └── page.tsx     # Our Business
-│   │   │   ├── news/
-│   │   │   │   └── page.tsx     # News
-│   │   │   └── contact/
-│   │   │       └── page.tsx     # Contact
-│   │   ├── layout.tsx
-│   │   └── globals.css
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Header.tsx       # Navigation + Language switcher
-│   │   │   ├── Footer.tsx       # Address + LinkedIn + Copyright
-│   │   │   └── Navigation.tsx
-│   │   ├── home/
-│   │   │   ├── HeroSection.tsx
-│   │   │   └── FounderMessage.tsx
-│   │   ├── about/
-│   │   │   ├── OurCompany.tsx
-│   │   │   ├── OurStory.tsx
-│   │   │   ├── Philosophy.tsx
-│   │   │   └── CompanyProfile.tsx
-│   │   ├── business/
-│   │   │   ├── BusinessCard.tsx
-│   │   │   └── BusinessSection.tsx
-│   │   └── ui/
-│   │       ├── Button.tsx
-│   │       ├── Card.tsx
-│   │       └── SectionTitle.tsx
-│   ├── i18n/
-│   │   ├── routing.ts
-│   │   └── request.ts
-│   └── lib/
-│       └── utils.ts
-├── messages/
-│   ├── en.json              # English translations
-│   ├── ja.json              # Japanese translations
-│   └── vi.json              # Vietnamese translations
-├── tailwind.config.ts
-├── next.config.ts
-├── tsconfig.json
-├── package.json
+├── template/              # Template gốc (tham khảo, không sửa)
+├── assets/
+│   ├── css/
+│   │   └── main.css       # CSS chính (customize từ template)
+│   ├── js/
+│   │   └── main.js        # JS chính
+│   ├── vendor/            # Bootstrap, AOS, Swiper, etc.
+│   │   ├── bootstrap/
+│   │   ├── bootstrap-icons/
+│   │   ├── aos/
+│   │   ├── glightbox/
+│   │   ├── swiper/
+│   │   ├── purecounter/
+│   │   ├── waypoints/
+│   │   ├── imagesloaded/
+│   │   ├── isotope-layout/
+│   │   └── php-email-form/
+│   └── img/
+│       ├── logo.png           # Logo Aura Orientalis
+│       ├── logo-white.png     # Logo trắng (cho nền xanh)
+│       ├── favicon.png
+│       ├── hero-bg.jpg        # Hero background
+│       ├── about.jpg
+│       ├── story.jpg
+│       ├── services-1.jpg     # Manufacturing & Retail
+│       ├── services-2.jpg     # Trading
+│       ├── services-3.jpg     # System Development
+│       └── services-4.jpg     # Business Support
+├── index.html             # Trang chủ (Home)
+├── about.html             # Về chúng tôi (About Us)
+├── services.html          # Lĩnh vực hoạt động (Our Business)
+├── blog.html              # Tin tức (News)
+├── contact.html           # Liên hệ (Contact)
+├── 404.html               # Trang lỗi
 ├── CLAUDE.md
-└── PLAN.md
+├── PLAN.md
+└── .gitignore
 ```
+
+### 3.3 Mapping Template → Trang Aura Orientalis
+| Template page | → | Aura page | Nội dung |
+|---------------|---|-----------|----------|
+| `index.html` | → | **Home** | Hero + Founder's Message |
+| `about.html` | → | **About Us** | Our Company, Story, Philosophy, Profile |
+| `services.html` | → | **Our Business** | 4 mảng kinh doanh |
+| `blog.html` | → | **News** | Tin tức (placeholder) |
+| `contact.html` | → | **Contact** | Form + Info + Map |
+| `404.html` | → | **404** | Trang lỗi |
 
 ---
 
@@ -113,6 +111,7 @@ auraWeb/
 ### 4.1 Layout chung
 - **Header (sticky):** Logo (trái) | Nav links (giữa) | Language + Contact (phải)
 - **Footer:** Logo + Địa chỉ + Phone/Email + LinkedIn icon + Copyright
+- **Navigation items:** Home | About Us | Our Business | News | Language ▼ | Contact
 - **Color Palette:**
   - Primary: `#1268b3` (brand blue)
   - Primary Light: `#1a7fd4`
@@ -121,41 +120,44 @@ auraWeb/
   - Background Alt: `#f8fafb` (xám nhạt)
   - Text: `#1a1a2e` (gần đen)
   - Text Light: `#555555`
-  - Accent: `#e8f4fd` (xanh rất nhạt cho background sections)
+  - Accent: `#e8f4fd` (xanh rất nhạt)
 
-### 4.2 Trang Home
+### 4.2 Trang Home (index.html)
 ```
 ┌──────────────────────────────────────────┐
-│  Logo  | Home About Business News | Lang │  ← Header
+│  Logo  | Home About Business News | Lang │  ← Header (sticky)
 ├──────────────────────────────────────────┤
 │                                          │
-│       [Hero Image / Video BG]            │
-│                                          │
-│    "A calming way of life"               │
-│                                          │
-│    Aura Orientalis Logo (lớn)            │
+│  Page Title (dark-background)            │
+│  "Aura Orientalis" (h1 lớn)             │
+│  "A calming way of life"                │
 │                                          │
 ├──────────────────────────────────────────┤
 │                                          │
-│  Thông điệp sáng lập                    │
-│  (Founder's Message)                     │
-│  - AI & universe analogy                 │
-│  - Invisible feelings                    │
-│  - Why founded Aura Orientalis           │
+│  Founder's Message Section               │
+│  『A calming way of life』               │
+│  Thông điệp về 95% vũ trụ vô hình...   │
+│  (EN / JP / VN tùy ngôn ngữ)           │
 │                                          │
 ├──────────────────────────────────────────┤
-│  Footer                                  │
+│  Newsletter + Footer                     │
 └──────────────────────────────────────────┘
 ```
 
-### 4.3 Trang About Us
+### 4.3 Trang About Us (about.html)
 ```
 ┌──────────────────────────────────────────┐
 │  Header                                  │
 ├──────────────────────────────────────────┤
+│  Page Title: "About Us"                  │
+├──────────────────────────────────────────┤
 │  Section: OUR COMPANY                    │
-│  - Ý nghĩa tên Aura Orientalis          │
-│  - "Eastern Breeze/Brilliance"           │
+│  ┌─────────────────┬────────────────┐    │
+│  │  Hình ảnh        │  Nội dung     │    │
+│  │  (bên trái)      │  (bên phải)   │    │
+│  └─────────────────┴────────────────┘    │
+│  - Ý nghĩa "Aura Orientalis"           │
+│  - "Eastern Breeze/Brilliance"          │
 ├──────────────────────────────────────────┤
 │  Section: OUR STORY                      │
 │  ┌─────────────────┬────────────────┐    │
@@ -163,62 +165,72 @@ auraWeb/
 │  │  (bên trái)      │   (bên phải)  │    │
 │  └─────────────────┴────────────────┘    │
 │  - Vietnamese & Japanese founders        │
-│  - Cultural fusion                       │
+│  - Cultural fusion VN-JP                 │
 │  - Supporting young entrepreneurs        │
 ├──────────────────────────────────────────┤
 │  Section: PHILOSOPHY (layout ngang)      │
 │  ┌──────────────────┬──────────────────┐ │
-│  │ 🔭 OUR VISION    │ 🎯 OUR MISSION  │ │
-│  │ (icon màu brand) │ (icon màu brand) │ │
-│  │ Nội dung...      │ Nội dung...      │ │
+│  │  OUR VISION       │  OUR MISSION    │ │
+│  │  (icon màu brand) │  (icon brand)   │ │
+│  │  Nội dung...      │  Nội dung...    │ │
 │  └──────────────────┴──────────────────┘ │
 ├──────────────────────────────────────────┤
 │  Section: COMPANY PROFILE                │
-│  - Bảng thông tin công ty                │
-│  - Layout theo mẫu Excel                 │
+│  Bảng thông tin: Tên, Địa chỉ,          │
+│  Lãnh đạo, Năm thành lập, Ngành nghề,  │
+│  Liên hệ                                │
 ├──────────────────────────────────────────┤
 │  Footer                                  │
 └──────────────────────────────────────────┘
 ```
 
-### 4.4 Trang Our Business
+### 4.4 Trang Our Business (services.html)
 ```
 ┌──────────────────────────────────────────┐
 │  Header                                  │
 ├──────────────────────────────────────────┤
-│  Section: MANUFACTURING & RETAIL         │
-│  ┌─────────────────┬────────────────┐    │
-│  │  Nội dung text   │   Hình ảnh    │    │
-│  └─────────────────┴────────────────┘    │
+│  Page Title: "Our Business"              │
+│  Mô tả ngắn về Aura Orientalis         │
 ├──────────────────────────────────────────┤
-│  Section: SYSTEM DEVELOPMENT             │
-│  ┌────────────────┬─────────────────┐    │
-│  │  Nội dung text  │   Hình ảnh     │    │
-│  └────────────────┴─────────────────┘    │
+│  Featured Services (4 icon cards)        │
+│  ┌────┐  ┌────┐  ┌────┐  ┌────┐        │
+│  │製品│  │貿易│  │開発│  │支援│        │
+│  └────┘  └────┘  └────┘  └────┘        │
 ├──────────────────────────────────────────┤
-│  Section: TRADING                        │
-│  ┌─────────────────┬────────────────┐    │
-│  │  Nội dung text   │   Hình ảnh    │    │
-│  └─────────────────┴────────────────┘    │
+│  Detail: MANUFACTURING & RETAIL          │
+│  ┌──────────────┬───────────────┐        │
+│  │  Image        │  Description │        │
+│  └──────────────┴───────────────┘        │
 ├──────────────────────────────────────────┤
-│  Section: BUSINESS SUPPORT               │
-│  ┌─────────────────┬────────────────┐    │
-│  │  Nội dung text   │   Hình ảnh    │    │
-│  └─────────────────┴────────────────┘    │
+│  Detail: SYSTEM DEVELOPMENT              │
+│  ┌──────────────┬───────────────┐        │
+│  │  Image        │  Description │        │
+│  └──────────────┴───────────────┘        │
+├──────────────────────────────────────────┤
+│  Detail: TRADING                         │
+│  ┌──────────────┬───────────────┐        │
+│  │  Image        │  Description │        │
+│  └──────────────┴───────────────┘        │
+├──────────────────────────────────────────┤
+│  Detail: BUSINESS SUPPORT                │
+│  ┌──────────────┬───────────────┐        │
+│  │  Image        │  Description │        │
+│  └──────────────┴───────────────┘        │
 ├──────────────────────────────────────────┤
 │  Footer (+ LinkedIn)                     │
 └──────────────────────────────────────────┘
 ```
 
-### 4.5 Trang Contact
-- Form liên hệ đơn giản
+### 4.5 Trang Contact (contact.html)
 - Thông tin: Địa chỉ, Phone, Email
+- Form liên hệ (Name, Email, Subject, Message)
+- Google Maps embed (vị trí HCM)
 - LinkedIn link
-- Google Maps embed (nếu cần)
 
-### 4.6 Trang News
+### 4.6 Trang News (blog.html)
 - Danh sách bài tin (placeholder ban đầu)
 - Layout grid cards
+- Blog detail page
 
 ---
 
@@ -229,84 +241,109 @@ auraWeb/
 2. **日本語 (ja)** - Tiếng Nhật
 3. **Tiếng Việt (vi)** - Tiếng Việt
 
-### Cách triển khai:
-- URL-based routing: `/en/about`, `/ja/about`, `/vi/about`
-- Language switcher trên header
-- Tất cả nội dung text đã có sẵn 3 ngôn ngữ trong file Excel
+### Cách triển khai (2 phương án):
+
+**Phương án A: JS-based switcher (đơn giản)**
+- Lưu nội dung 3 ngôn ngữ trong JSON hoặc data attributes
+- JavaScript toggle hiển thị ngôn ngữ tương ứng
+- Ưu: ít file, dễ maintain | Nhược: SEO kém hơn
+
+**Phương án B: Trang riêng cho từng ngôn ngữ (tốt cho SEO)**
+- Folder cấu trúc: `/en/`, `/ja/`, `/vi/`
+- Mỗi ngôn ngữ có bộ HTML riêng
+- Ưu: SEO tốt | Nhược: nhiều file hơn
+
+**Khuyến nghị:** Phương án A cho giai đoạn đầu, nâng cấp sang B nếu cần SEO.
+
+### Nội dung đã có sẵn 3 ngôn ngữ:
+- ✅ Founder's Message (EN/JP/VN)
+- ✅ Our Company (EN/JP/VN)
+- ✅ Our Story (EN/JP/VN)
+- ✅ Vision & Mission (EN/JP/VN)
+- ✅ Company Profile (EN/JP)
+- ✅ Company Products (EN/JP/VN)
 
 ---
 
 ## 6. Design Guidelines
 
-### Typography
-- **Heading:** Inter hoặc Noto Sans (hỗ trợ JP/VN characters)
-- **Body:** Noto Sans / Inter
-- **Font weight:** Light (300) cho body, Regular (400), Medium (500) cho heading
+### Typography (từ template)
+- **Heading:** Raleway / Poppins
+- **Body:** Roboto
+- **CJK Support:** Cần thêm Noto Sans JP cho tiếng Nhật
 
-### Spacing & Rhythm
-- Section padding: `py-20` (80px)
-- Container max-width: 1200px
-- Component gap: 32-48px
+### Animation (AOS - có sẵn trong template)
+- `data-aos="fade-up"` - Fade in từ dưới lên
+- `data-aos="zoom-in"` - Zoom in
+- `data-aos-delay="100|200|300"` - Delay staggered
+- Phù hợp "calming" theme - nhẹ nhàng, không flashy
 
-### Animation (subtle, calming)
-- Fade-in on scroll cho sections
-- Smooth hover transitions (300ms ease)
-- Không dùng animation quá nhanh/flashy
-
-### Responsive Breakpoints
-- Mobile: < 768px (single column)
-- Tablet: 768px - 1024px (flexible)
-- Desktop: > 1024px (full layout)
+### Responsive (Bootstrap 5 grid)
+- `col-lg-*` - Desktop (≥992px)
+- `col-md-*` - Tablet (≥768px)
+- Default - Mobile (full width)
 
 ---
 
 ## 7. Kế hoạch triển khai (Phases)
 
 ### Phase 1: Setup & Foundation
-- [ ] Khởi tạo Next.js project với TypeScript + Tailwind
-- [ ] Cấu hình i18n (next-intl) cho EN/JP/VN
-- [ ] Setup Tailwind theme (brand colors, fonts)
-- [ ] Tạo layout components (Header, Footer, Navigation)
-- [ ] Chuẩn bị assets: logo SVG, placeholder images
+- [ ] Copy template HTML sang root project
+- [ ] Tải và setup vendor libraries (Bootstrap, AOS, Swiper, etc.)
+- [ ] Chuẩn bị assets: convert logo PDF → PNG/SVG, favicon
+- [ ] Customize `assets/css/main.css` với brand color `#1268b3`
+- [ ] Setup Header chung: logo image, nav links đúng (Home, About Us, Our Business, News, Language, Contact)
+- [ ] Setup Footer chung: địa chỉ đúng (314/6 Dien Bien Phu), phone, email, LinkedIn
 
-### Phase 2: Trang Home
-- [ ] Hero Section với logo + slogan
-- [ ] Founder's Message section
-- [ ] Responsive layout
-- [ ] Scroll animations
+### Phase 2: Trang Home (index.html)
+- [ ] Hero section: logo lớn + slogan "A calming way of life"
+- [ ] Founder's Message section (EN, có toggle JP/VN)
+- [ ] Loại bỏ sections không cần từ template
+- [ ] Responsive check
 
-### Phase 3: Trang About Us
-- [ ] Our Company section
-- [ ] Our Story section (text + image layout)
-- [ ] Philosophy section (Vision + Mission cards)
+### Phase 3: Trang About Us (about.html)
+- [ ] Our Company section (ý nghĩa tên, layout text + image)
+- [ ] Our Story section (text trái, hình phải)
+- [ ] Philosophy section (Vision + Mission - 2 columns ngang)
 - [ ] Company Profile table
+- [ ] Loại bỏ Stats, Clients, Skills, Testimonials sections
 
-### Phase 4: Trang Our Business
-- [ ] Business section component (reusable)
-- [ ] Manufacturing & Retail
-- [ ] System Development
-- [ ] Trading
-- [ ] Business Support
+### Phase 4: Trang Our Business (services.html)
+- [ ] Page title với mô tả Aura Orientalis
+- [ ] 4 Featured service cards (icon + tên)
+- [ ] 4 Detail sections với hình + mô tả
+- [ ] Nội dung đúng: Manufacturing & Retail, System Development, Trading, Business Support
+- [ ] Loại bỏ Pricing section
 
 ### Phase 5: Trang Contact & News
-- [ ] Contact page với form + info
-- [ ] News page (placeholder/skeleton)
+- [ ] Contact: cập nhật địa chỉ, phone, email thực
+- [ ] Contact: Google Maps embed đúng vị trí HCM
+- [ ] News/Blog: tạo skeleton placeholder
+- [ ] 404 page
 
-### Phase 6: Polish & Deploy
-- [ ] SEO optimization (meta tags, OG images)
-- [ ] Performance optimization (image lazy loading, etc.)
+### Phase 6: i18n (Đa ngôn ngữ)
+- [ ] Tạo language switcher trên header
+- [ ] Implement JSON-based content cho 3 ngôn ngữ
+- [ ] Test chuyển đổi EN/JP/VN
+
+### Phase 7: Polish & Deploy
+- [ ] SEO: meta tags, OG images, title đúng cho mỗi trang
+- [ ] Performance: image optimization, lazy loading
+- [ ] Thêm Noto Sans JP font cho tiếng Nhật
 - [ ] Cross-browser testing
-- [ ] Deploy lên Vercel
+- [ ] Deploy
 
 ---
 
 ## 8. Lưu ý quan trọng
 
-1. **Hình ảnh placeholder:** Tài liệu ghi "nhờ anh Tiến ghép lại 2 hình này" - cần hình ảnh thực tế từ client
-2. **Tone thiết kế:** "Calming" - nhẹ nhàng, thanh lịch, nhiều khoảng trắng, animation mượt mà
-3. **Font tiếng Nhật:** Cần dùng font hỗ trợ CJK (Noto Sans JP)
-4. **LinkedIn:** Cần link LinkedIn thực tế của công ty
-5. **News page:** Nội dung chưa có, tạo skeleton trước
+1. **Template gốc giữ nguyên:** Folder `template/` không sửa, chỉ tham khảo
+2. **Hình ảnh cần bổ sung:** Tài liệu ghi "nhờ anh Tiến ghép lại 2 hình này" - dùng placeholder trước
+3. **Địa chỉ mới:** 314/6 Dien Bien Phu Street (Excel) khác với template (77/4A Vo Thi Hoi) - dùng bản Excel
+4. **Tone thiết kế:** "Calming" - nhẹ nhàng, thanh lịch, nhiều khoảng trắng
+5. **LinkedIn:** Cần link LinkedIn thực tế của công ty
+6. **Vendor libraries:** Template không có folder `assets/` - cần tải riêng hoặc dùng CDN
+7. **index.html trong template:** Hiện tại title là "Services" và nav bị comment - cần sửa thành trang Home thực sự
 
 ---
 
@@ -315,8 +352,12 @@ auraWeb/
 | Hạng mục | Trạng thái |
 |----------|-----------|
 | Thu thập yêu cầu | ✅ Hoàn thành |
+| Phân tích template | ✅ Hoàn thành |
 | Lập kế hoạch | ✅ Hoàn thành |
-| Setup project | ⬜ Chưa bắt đầu |
-| Implementation | ⬜ Chưa bắt đầu |
-| Testing | ⬜ Chưa bắt đầu |
-| Deployment | ⬜ Chưa bắt đầu |
+| Phase 1: Setup & Foundation | ⬜ Chưa bắt đầu |
+| Phase 2: Trang Home | ⬜ Chưa bắt đầu |
+| Phase 3: Trang About Us | ⬜ Chưa bắt đầu |
+| Phase 4: Trang Our Business | ⬜ Chưa bắt đầu |
+| Phase 5: Contact & News | ⬜ Chưa bắt đầu |
+| Phase 6: i18n | ⬜ Chưa bắt đầu |
+| Phase 7: Polish & Deploy | ⬜ Chưa bắt đầu |
