@@ -2033,16 +2033,36 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
 
 
 /* ==========================================================================
-   20. Philosophy Section (Vision & Mission Cards)
+   20. Philosophy Section (Mission, Vision & Values Cards)
    ========================================================================== */
+
+.philosophy.section.dark-background {
+  background: #1a1a2e;
+  padding: 80px 0;
+}
+
+.philosophy.dark-background .section-title h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.philosophy.dark-background .section-title p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+}
 
 .philosophy-card {
   background: #ffffff;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-base);
-  border: 1px solid var(--color-border-light);
   height: 100%;
+  position: relative;
+  margin-top: 36px;
+  padding-top: 52px !important;
 }
 
 .philosophy-card:hover {
@@ -2050,17 +2070,41 @@ body[data-aos-delay="500"] [data-aos].aos-animate {
   transform: translateY(-4px);
 }
 
+.philosophy-icon {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.philosophy-icon img {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
 .philosophy-card h3 {
   color: var(--color-primary);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-style: italic;
 }
 
 .philosophy-card p {
   color: var(--color-text-body);
-  line-height: 1.8;
+  line-height: 1.7;
+  font-size: 0.92rem;
 }
 
+
+.service-img-placeholder {
+  background: #f0f4f8;
+  border-radius: var(--radius-md);
+  min-height: 250px;
+  height: 100%;
+  border: 2px dashed #ccd5e0;
+}
 
 /* ==========================================================================
    21. Company Profile Table
