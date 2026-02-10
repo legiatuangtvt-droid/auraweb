@@ -23,6 +23,12 @@
 - [x] Sitemap submitted to Google Search Console
 - [x] All 5 pages indexed / requested indexing (2026-02-10)
 - [x] Google Analytics 4 added (G-P4P0NB18V3)
+- [x] LocalBusiness JSON-LD schema on Contact page (2026-02-10)
+- [x] BreadcrumbList JSON-LD schema on all sub-pages (2026-02-10)
+- [x] Image optimization: lazy loading + descriptive alt text (2026-02-10)
+- [x] Preload critical resources: CSS + hero image (2026-02-10)
+- [x] Internal links between pages (About↔Services↔Contact, Blog→About/Services) (2026-02-10)
+- [x] Custom 404 page with full navigation + GA4 tracking (2026-02-10)
 
 ---
 
@@ -72,27 +78,23 @@
 
 ## Phase 2: On-Page SEO (Priority: HIGH)
 
-### 2.1 Image Optimization
+### 2.1 Image Optimization ✅ PARTIAL (2026-02-10)
 - Convert large images (nen.jpg, about photos) to WebP format
-- Add descriptive `alt` text to all images
+- ~~Add descriptive `alt` text to all images~~ — Done
 - Compress images (target < 200KB each)
 - Replace service placeholder images with real images when available
 - Add `width` and `height` attributes to prevent layout shift
 
-### 2.2 Page Speed Optimization
+### 2.2 Page Speed Optimization ✅ PARTIAL (2026-02-10)
 - Minify CSS (`main.css`) and JS files for production
-- Lazy load images below the fold: `<img loading="lazy">`
-- Preload critical resources:
-  ```html
-  <link rel="preload" href="assets/css/main.css" as="style">
-  <link rel="preload" href="assets/img/nen.jpg" as="image">
-  ```
+- ~~Lazy load images below the fold: `<img loading="lazy">`~~ — Done
+- ~~Preload critical resources (CSS + hero image on all pages)~~ — Done
 - Consider self-hosting Google Fonts to reduce DNS lookups
 
-### 2.3 Content Improvements
+### 2.3 Content Improvements ✅ PARTIAL (2026-02-10)
 - Add more descriptive text to each page (Google prefers 300+ words)
 - Use target keywords naturally in headings and body text
-- Add internal links between pages (e.g., About page links to Services)
+- ~~Add internal links between pages (e.g., About page links to Services)~~ — Done
 
 ---
 
@@ -107,18 +109,8 @@
 - Category: Business Consulting / Manufacturing
 - Add photos, business hours, description
 
-### 3.2 Local Business Schema
-- Add LocalBusiness JSON-LD schema to contact page:
-  ```json
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Aura Orientalis Co., LTD.",
-    "address": { ... },
-    "geo": { "latitude": "...", "longitude": "..." },
-    "openingHours": "Mo-Fr 08:00-17:00"
-  }
-  ```
+### 3.2 Local Business Schema ✅ DONE (2026-02-10)
+- ~~Add LocalBusiness JSON-LD schema to contact page~~ — Added with full address, geo, opening hours, contact info
 
 ### 3.3 Business Directory Listings
 - Register on Vietnamese business directories
@@ -186,15 +178,15 @@
 
 ## Phase 7: Advanced SEO (Priority: LOW)
 
-### 7.1 Rich Snippets
+### 7.1 Rich Snippets ✅ PARTIAL (2026-02-10)
 - Add FAQ schema for common questions
-- Add BreadcrumbList schema for navigation
+- ~~Add BreadcrumbList schema for navigation~~ — Done on all 4 sub-pages
 - Add Service schema for each business area
 
-### 7.2 404 Page
-- Create custom 404.html page
-- Include navigation links back to main pages
-- Track 404 errors in Search Console
+### 7.2 404 Page ✅ DONE (2026-02-10)
+- ~~Create custom 404.html page~~ — Done with full header/footer navigation
+- ~~Include navigation links back to main pages~~ — Done (Home, About, Services, Contact)
+- ~~Track 404 errors in Search Console~~ — GA4 tracking included on 404 page
 
 ### 7.3 Security Headers
 - Add `X-Content-Type-Options: nosniff`
@@ -211,9 +203,9 @@
 | ~~1~~ | ~~Submit sitemap to Google Search Console~~ | ~~30 min~~ | ~~HIGH~~ ✅ |
 | 2 | Create Google Business Profile | 1 hour | HIGH |
 | ~~3~~ | ~~Add Google Analytics 4~~ | ~~30 min~~ | ~~HIGH~~ ✅ |
-| 4 | Optimize & compress images | 1 hour | MEDIUM |
+| ~~4~~ | ~~Optimize images: alt text + lazy loading~~ | ~~30 min~~ | ~~MEDIUM~~ ✅ |
 | 5 | Enable GZIP on server | 30 min | MEDIUM |
-| 6 | Add lazy loading to images | 30 min | MEDIUM |
+| ~~6~~ | ~~Add lazy loading to images~~ | ~~30 min~~ | ~~MEDIUM~~ ✅ |
 | 7 | Post on LinkedIn weekly | Ongoing | MEDIUM |
 | 8 | Publish first blog post | 2 hours | MEDIUM |
 | 9 | Register on business directories | 2 hours | LOW |

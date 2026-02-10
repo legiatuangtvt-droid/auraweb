@@ -30,6 +30,63 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://auraorientalis.vn/contact.html">
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://auraorientalis.vn/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://auraorientalis.vn/contact.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aura Orientalis Co., LTD.",
+    "url": "https://auraorientalis.vn",
+    "logo": "https://auraorientalis.vn/assets/img/logo-removebg.png",
+    "image": "https://auraorientalis.vn/assets/img/og-image.png",
+    "description": "A Vietnamese-Japanese company creating products and services that value feelings of happiness, security, and calming.",
+    "telephone": "+84-935-088-346",
+    "email": "ngoc.nguyen@auraorientalis.vn",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "314/6 Dien Bien Phu Street, Vuon Lai Ward",
+      "addressLocality": "Ho Chi Minh City",
+      "addressCountry": "VN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "10.82",
+      "longitude": "106.71"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/auraorientalis/"
+    ]
+  }
+  </script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/logo-removebg.png" rel="apple-touch-icon">
@@ -45,6 +102,9 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="assets/css/main.css" as="style">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">

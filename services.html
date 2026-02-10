@@ -30,6 +30,28 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://auraorientalis.vn/services.html">
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://auraorientalis.vn/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Our Business",
+        "item": "https://auraorientalis.vn/services.html"
+      }
+    ]
+  }
+  </script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/logo-removebg.png" rel="apple-touch-icon">
@@ -45,6 +67,9 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="assets/css/main.css" as="style">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -199,6 +224,15 @@
           </div>
         </div>
 
+
+        <!-- CTA Links -->
+        <div class="row mt-5" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-12 text-center">
+            <p data-i18n="services.cta_text">Want to learn more about our company or discuss a project?</p>
+            <a href="about.html" class="btn btn-outline-primary me-2" data-i18n="services.cta_about">About Us</a>
+            <a href="contact.html" class="btn btn-primary" data-i18n="services.cta_contact">Contact Us</a>
+          </div>
+        </div>
 
       </div>
     </section><!-- /Services Detail Section -->
