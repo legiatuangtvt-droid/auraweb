@@ -21,6 +21,8 @@
 - [x] Fast loading (static HTML, no server-side rendering)
 - [x] Google Search Console verified (DNS TXT, 2026-02-10)
 - [x] Sitemap submitted to Google Search Console
+- [x] All 5 pages indexed / requested indexing (2026-02-10)
+- [x] Google Analytics 4 added (G-P4P0NB18V3)
 
 ---
 
@@ -150,8 +152,8 @@
 
 ## Phase 6: Monitoring & Analytics (Priority: MEDIUM)
 
-### 6.1 Google Analytics 4
-- Add GA4 tracking code to all pages
+### 6.1 Google Analytics 4 ✅ DONE (2026-02-10)
+- ~~Add GA4 tracking code to all pages~~ — Measurement ID: `G-P4P0NB18V3`
 - Track: page views, user demographics, traffic sources
 - Set up goals: contact form submissions, page engagement
 
@@ -193,7 +195,7 @@
 |---|--------|--------|--------|
 | ~~1~~ | ~~Submit sitemap to Google Search Console~~ | ~~30 min~~ | ~~HIGH~~ ✅ |
 | 2 | Create Google Business Profile | 1 hour | HIGH |
-| 3 | Add Google Analytics 4 | 30 min | HIGH |
+| ~~3~~ | ~~Add Google Analytics 4~~ | ~~30 min~~ | ~~HIGH~~ ✅ |
 | 4 | Optimize & compress images | 1 hour | MEDIUM |
 | 5 | Enable GZIP on server | 30 min | MEDIUM |
 | 6 | Add lazy loading to images | 30 min | MEDIUM |
