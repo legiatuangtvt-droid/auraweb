@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/vendor/
 
-Sitemap: https://aura-web-374c4.web.app/sitemap.xml
+Sitemap: https://auraorientalis.vn/sitemap.xml
