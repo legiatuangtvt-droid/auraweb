@@ -26,6 +26,21 @@
 
 ---
 
+## Monitoring Dashboards
+
+| Tool | URL | Notes |
+|------|-----|-------|
+| **Google Search Console** | https://search.google.com/search-console?resource_id=sc-domain:auraorientalis.vn | Lập chỉ mục trang, sơ đồ trang web, kiểm tra URL |
+| **Google Analytics 4** | https://analytics.google.com/analytics/web/#/a366166832p514800125/reports/intelligenthome | Measurement ID: `G-P4P0NB18V3` |
+
+### Quick Navigation (Google Search Console)
+- **Lập chỉ mục trang:** Menu trái → "Trang"
+- **Sơ đồ trang web:** Menu trái → "Sơ đồ trang web"
+- **Kiểm tra URL:** Ô tìm kiếm phía trên
+- **Hiệu suất tìm kiếm:** Menu trái → "Hiệu suất"
+
+---
+
 ## Phase 1: Technical SEO (Priority: HIGH)
 
 ### 1.1 Submit Sitemap to Google Search Console ✅ DONE (2026-02-10)
